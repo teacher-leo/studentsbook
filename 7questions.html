@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Inglês Nível A1 - Múltipla Escolha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .result {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercícios de Inglês Nível A1 - Múltipla Escolha</h1>
+
+    <div class="question">
+        <p>1. What is the capital of France?</p>
+        <label><input type="radio" name="q1" value="correct"> Paris</label><br>
+        <label><input type="radio" name="q1" value="incorrect"> London</label><br>
+        <label><input type="radio" name="q1" value="incorrect"> Rome</label><br>
+        <button onclick="checkAnswer('q1', 'result1')">Checar</button>
+        <div id="result1" class="result"></div>
+    </div>
+
+    <div class="question">
+        <p>2. What is 2 + 2?</p>
+        <label><input type="radio" name="q2" value="correct"> 4</label><br>
+        <label><input type="radio" name="q2" value="incorrect"> 5</label><br>
+        <label><input type="radio" name="q2" value="incorrect"> 3</label><br>
+        <button onclick="checkAnswer('q2', 'result2')">Checar</button>
+        <div id="result2" class="result"></div>
+    </div>
+
+    <div class="question">
+        <p>3. Which color is the sky on a clear day?</p>
+        <label><input type="radio" name="q3" value="correct"> Blue</label><br>
+        <label><input type="radio" name="q3" value="incorrect"> Green</label><br>
+        <label><input type="radio" name="q3" value="incorrect"> Red</label><br>
+        <button onclick="checkAnswer('q3', 'result3')">Checar</button>
+        <div id="result3" class="result"></div>
+    </div>
+
+    <div class="question">
+        <p>4. What is the first month of the year?</p>
+        <label><input type="radio" name="q4" value="correct"> January</label><br>
+        <label><input type="radio" name="q4" value="incorrect"> February</label><br>
+        <label><input type="radio" name="q4" value="incorrect"> March</label><br>
+        <button onclick="checkAnswer('q4', 'result4')">Checar</button>
+        <div id="result4" class="result"></div>
+    </div>
+
+    <div class="question">
+        <p>5. How many days are in a week?</p>
+        <label><input type="radio" name="q5" value="correct"> 7</label><br>
+        <label><input type="radio" name="q5" value="incorrect"> 5</label><br>
+        <label><input type="radio" name="q5" value="incorrect"> 6</label><br>
+        <button onclick="checkAnswer('q5', 'result5')">Checar</button>
+        <div id="result5" class="result"></div>
+    </div>
+
+    <div class="question">
+        <p>6. What is the opposite of 'hot'?</p>
+        <label><input type="radio" name="q6" value="correct"> Cold</label><br>
+        <label><input type="radio" name="q6" value="incorrect"> Warm</label><br>
+        <label><input type="radio" name="q6" value="incorrect"> Hot</label><br>
+        <button onclick="checkAnswer('q6', 'result6')">Checar</button>
+        <div id="result6" class="result"></div>
+    </div>
+
+    <div class="question">
+        <p>7. What is 10 divided by 2?</p>
+        <label><input type="radio" name="q7" value="correct"> 5</label><br>
+        <label><input type="radio" name="q7" value="incorrect"> 10</label><br>
+        <label><input type="radio" name="q7" value="incorrect"> 2</label><br>
+        <button onclick="checkAnswer('q7', 'result7')">Checar</button>
+        <div id="result7" class="result"></div>
+    </div>
+
+    <script>
+        function checkAnswer(questionName, resultId) {
+            const answers = document.getElementsByName(questionName);
+            let correctAnswer = false;
+            for (let answer of answers) {
+                if (answer.checked) {
+                    correctAnswer = answer.value === 'correct';
+                    break;
+                }
+            }
+            const resultDiv = document.getElementById(resultId);
+            if (correctAnswer) {
+                resultDiv.textContent = "Correto!";
+                resultDiv.className = "result correct";
+            } else {
+                resultDiv.textContent = "Incorreto!";
+                resultDiv.className = "result incorrect";
+            }
+            resultDiv.style.display = "block";
+        }
+    </script>
+</body>
+</html>
