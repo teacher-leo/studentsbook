@@ -3,44 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Simples</title>
+    <title>Exercícios de Inglês Nível A1</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
+            margin: 20px;
         }
-        header, footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
+        .example {
+            margin-bottom: 10px;
         }
-        main {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .answer {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
         }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
+        .answer:hover::after {
+            content: attr(data-answer);
+            margin-left: 10px;
+            color: green;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo à Página Simples</h1>
-    </header>
-    <main>
-        <h1>Olá, Mundo!</h1>
-        <p>Esta é uma página HTML5 básica e simples para demonstrar a estrutura de um documento HTML.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Página Simples. Todos os direitos reservados.</p>
-    </footer>
+    <h1>Exercícios de Inglês Nível A1</h1>
+    <p>Bem-vindo à página de exercícios de inglês nível A1. Aqui você encontrará explicações e exemplos simples para ajudá-lo a começar sua jornada no aprendizado do inglês.</p>
+    
+    <h2>Exemplos</h2>
+    <div class="example">
+        <p><strong>1. I am a student.</strong> (Eu sou um estudante.)</p>
+    </div>
+    <div class="example">
+        <p><strong>2. She is a teacher.</strong> (Ela é uma professora.)</p>
+    </div>
+    <div class="example">
+        <p><strong>3. We are friends.</strong> (Nós somos amigos.)</p>
+    </div>
+
+    <h2>Exercícios</h2>
+    <p>Complete as frases abaixo. Passe o cursor sobre "ver resposta" para verificar a resposta correta.</p>
+    
+    <div class="exercise">
+        <p>1. He ____ a doctor. <span class="answer" data-answer="is">ver resposta</span></p>
+    </div>
+    <div class="exercise">
+        <p>2. They ____ students. <span class="answer" data-answer="are">ver resposta</span></p>
+    </div>
+    <div class="exercise">
+        <p>3. I ____ happy. <span class="answer" data-answer="am">ver resposta</span></p>
+    </div>
 </body>
 </html>
